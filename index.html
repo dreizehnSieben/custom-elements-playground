@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Buildless Web Components with Lit</title>
+    <script type="importmap">
+            {
+                "imports": {
+                    "lit": "./node_modules/lit/index.js",
+                    "@lit/reactive-element": "./node_modules/@lit/reactive-element/reactive-element.js",
+                    "lit-html": "./node_modules/lit-html/lit-html.js",
+                    "lit-html/": "./node_modules/lit-html/",
+                    "lit-element/": "./node_modules/lit-element/",
+                    "some-typography": "./src/some-typography/index.js",
+                    "some-infobox": "./src/some-infobox/index.js"
+                }
+            }
+        </script>
+    <script type="module" src="./src/main.js"></script>
+</head>
+
+<body>
+    <some-infobox caption="Slotted Styles">
+        <some-typography>
+            Einleitender Satz...
+            <p>
+                Nächster Absatz, der gestylt werden soll...
+            </p>
+        </some-typography>
+    </some-infobox>
+</body>
+
+</html>
